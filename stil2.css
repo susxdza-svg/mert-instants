@@ -1,22 +1,94 @@
-.btn1{
-    height: 20rem;
-    width: 20rem;
-    font-size:5rem;
-    border-radius: 20rem;
+.tutucu {
+    background-color: rgb(134, 141, 148);
+    border-radius: 20px;
+    display: grid;
+    /* Bilgisayarda butonların sığacağı ideal aralığı sabitliyoruz */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn1 {
+    
+    width: 180px;
+    height: 180px;
+    
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
     background-color: red;
-    border: 1.2rem solid rgb(31, 31, 31);
+    border: 8px solid rgb(31, 31, 31);
     cursor: pointer;
     color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    word-break: break-word;
 }
-.btn1:hover{
-      border: 1.2rem solid rgb(0, 0, 0);
+
+.btn1:hover {
+    border: 8px solid rgb(0, 0, 0);
     color: rgb(163, 163, 163);
     background-color: rgb(75, 0, 0);
 }
-.tutucu{
-    background-color: rgb(134, 141, 148);
-    border-radius:  8rem;
-    display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
-    gap: 2rem;
+
+/* Telefon ekranları için özel küçük ayar (Mobilde 180px taşmasın diye 120px yapıyoruz) */
+@media (max-width: 600px) {
+    .btn1 {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+        border: 5px solid rgb(31, 31, 31);
+    }
+}
+
+.ekleme-paneli {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    max-width: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+.ekleme-paneli input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    
+}
+
+
+.ekleme-paneli button {
+    padding: 10px;
+    background-color: #ff3b30;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  
+}
+.yanpanel{
+    background-color: rgb(236, 255, 255);
+    
+}
+.yanpanel.btn{
+    display: flex;
+    flex-direction: column;
+
+    
 }

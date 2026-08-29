@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mert Instants</title>
     <link rel="stylesheet" href="stil2.css">
 </head>
 <body>
+  <div  onclick="yaniAc()" class="yanpanel">
+    <button class="Sign in" onclick="sign()">Sign In</button>
+    <button class="login in" onclick="log()">log In In</button>
+    <button class="sesEkle"onclick="muzikEkle()">Add Music , Sound Effects , memes</button>
+  </div>
+  <div class="ekleme-paneli">
+    <h3>Add Your Memes Or Musics</h3>
+    <input type="text" id="butonAdi" placeholder="Buton Name (Example: Memes,Sounds)">
+    <input type="file" id="sesDosyasi" accept="audio/mp3, audio/*">
+    <button onclick="yeniButonEkle()">Butonu Oluştur</button>
+  </div>
   <audio id="degirmen" src="https://videotourl.com/audio/1788012435376-eb02f9eb-d17d-47a2-b7b3-2de2d31f0a69.mp3" preload="auto"></audio>
     <audio id="iki" src="https://cdn.imageurlgenerator.com/uploads/7b6d5971-f8ff-4307-b07b-5002d163dcca.mp3" preload="auto"></audio>
     <audio id="dbgg" src="https://www.image2url.com/r2/default/audio/1788011277596-9f48f2b3-f758-4e39-9880-ecd77a5404ff.mp3" preload="auto"></audio>
@@ -22,6 +32,40 @@
     <button class="btn1"onclick="sesiCal5()">değirmenci dayı</button>
     <button class="btn1"onclick="sesiCal6()">emicivivoke</button>
     </div>
+    <style>
+  
+  body {
+    touch-action: manipulation;
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+</style>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBbgAQ8ieuV1S3G4lQA_N-kt4LCDyMHWkQ",
+    authDomain: "mert-instants.firebaseapp.com",
+    projectId: "mert-instants",
+    storageBucket: "mert-instants.firebasestorage.app",
+    messagingSenderId: "125343484390",
+    appId: "1:125343484390:web:643d75a6609284d174ae27",
+    measurementId: "G-2G9JG4059X"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <script src="kod2.js"></script>
 </body>
 </html>
